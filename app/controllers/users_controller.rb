@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    
+    @users = User.all
   end
 
   def new
@@ -11,12 +11,26 @@ class UsersController < ApplicationController
   end
 
   def create
-    render json: params
+    # render json: params
+    user = User.new(user_params)
+    if user.save
+      # session[:user_id] = user.id
+      redirect_to root_path
+    else
+      flash[:Error] = user.errors.messages
+      redirect_to new_user_path
+    end
   end
 
   def edit
   end
 
   def destroy
+  end
+
+  private
+
+  def user_params
+  params.require(:user).permit(:name, :email, :password, :password_confirmation, :gender, :skill_level, :city, :more_info)
   end
 end

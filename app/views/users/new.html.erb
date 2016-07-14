@@ -15,10 +15,11 @@
 		<%= f.label :password_confirmation %>
 		<%= f.password_field :password_confirmation %>
 
-		<%= f.label(:Female) %>
 		<%= f.radio_button(:gender, 'female') %>
-		<%= f.label(:Male) %>
-		<%= f.radio_button(:gender, 'male') %><br/>
+		<%= f.label(:Female) %>
+
+		<%= f.radio_button(:gender, 'male') %>
+		<%= f.label(:Male) %><br/>
 
 		<%= f.label :skill_level %>
 		<%= f.select :skill_level, [['Beginner', 'beginner'], ['Intermediate', 'intermediate'], ['Advanced', 'advanced']] %>
