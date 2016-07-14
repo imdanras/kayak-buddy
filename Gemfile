@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Foundation gem
 gem 'foundation-rails'
+gem 'rest-client'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
