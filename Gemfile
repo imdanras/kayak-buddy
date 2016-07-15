@@ -28,8 +28,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Foundation gem
-gem 'foundation-rails'
+# gem 'foundation-rails'
 gem 'rest-client'
+
+gem 'materialize-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

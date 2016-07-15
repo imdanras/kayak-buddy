@@ -3,11 +3,11 @@
 
 <%= form_tag(root_path, method: :GET) do %>
 
-<%= text_field_tag(:term) %>
+<p class="weatherBox"><%= text_field_tag(:term) %></p>
 
 <%= submit_tag('Search') %>
 <% end %>
-
+<br/>
   <div>
   <h3>Current Temp</h3>
   <p><%= @data[0]['condition']['temperature'] %> &#x2109;</p>
@@ -25,8 +25,8 @@
   <p><%= @data[0]['swell']['components']['combined']['compassDirection']%></p>
 
   <h3>charts</h3>
-  <p><%= @data[0]['charts']['swell']%></p>
-  <p><%= @data[0]['charts']['wind']%></p>
+  <p><%= image_tag(@data[0]['charts']['swell']) %></p>
+  <p><%= image_tag(@data[0]['charts']['wind']) %></p>
 
 </div>
 

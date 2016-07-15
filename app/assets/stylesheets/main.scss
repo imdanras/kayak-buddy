@@ -2,9 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "materialize";
+
 body {
-	display: flex;
-  	align-items: center;
+	text-align: center;
   	justify-content: center;
 }
 
+.weatherBox {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.signup {
+	width: 50%;
+	margin: 0 auto;
+}
+
+footer {
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     background-color: #efefef;
+}

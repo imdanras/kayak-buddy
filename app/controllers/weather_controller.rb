@@ -8,7 +8,6 @@ data = RestClient.get("http://magicseaweed.com/api/deecd9b63d7991728f562f51a86f7
 
 @data = JSON.parse(data)
 
-# puts '**********', @data
 # render :json => @data
   end
 end
