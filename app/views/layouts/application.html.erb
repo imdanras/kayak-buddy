@@ -4,15 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : " Kayak Buddy " %></title>
+    <link rel="shortcut icon" href="https://image.freepik.com/free-icon/kayak_318-109194.png" sizes="32x32" />
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render "partials/flash" %>
-    <%= yield %>
+      <%= render "partials/flash" %>
+      <%= render "partials/header" %>
+        <%= yield %>
     
+    <%= render "partials/footer" %>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation-flex.css"></script>
   </body>
 </html>
