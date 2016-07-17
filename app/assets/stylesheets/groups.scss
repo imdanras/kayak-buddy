@@ -4,21 +4,6 @@
 .pic {
   width: 100%;
 }
-#pic2 {
-  width: 100%;
-}
-#pic3 {
-  width: 100%;
-}
-#pic4 {
-  width: 100%;
-}
-#pic5 {
-  width: 100%;
-}
-#pic6 {
-  width: 100%;
-}
 
 #container1 {
   height: 425px;
@@ -53,4 +38,11 @@
 }
 #bttn6 {
   background-color: #067BC2
+}
+
+@media (max-width: 375px) {
+
+  .groups {
+    font-size: 2rem;
+  }
 }

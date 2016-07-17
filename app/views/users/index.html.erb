@@ -4,11 +4,19 @@
 <%= link_to('logout', logout_path, method: :delete) %>
 
 <% @users.each do |user| %>
-<div>
-  <div><%= user.name %></div>
-  <div><%= user.gender %></div>
-  <div><%= user.skill_level %></div>
-  <div><%= user.city %></div>
-  <div><%= user.more_info %></div>
+<div class="divider"></div>
+<div class="section">
+  
+<div><a href="<%= user.picture %>" alt="user image"></a></div>
+
+  <div class="container some-class">
+    <p>
+      <span>link_to('<%= user.name %>', user_path')</span>    <!-- this should like to specific user's page (user_path) -->
+      <span>| <%= user.city %></span>
+      <span>| <%= user.gender %> | </span>
+    </p>
+    <p>Skill Level: <%= user.skill_level %></p>
+    <div><%= user.more_info %></div>
+ </div>
 </div>
 <% end %>
