@@ -6,8 +6,8 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.email_sender.subject
   #
   def email_sender
-    @greeting = "Hi"
+    @greeting = "Hello!" 
 
-    mail to: "to@example.org"
+    mail to: "to@ga.co"
   end
 end
