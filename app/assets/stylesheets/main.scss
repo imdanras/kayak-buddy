@@ -6,7 +6,7 @@
 
 body {
 	text-align: center;
-  	justify-content: center;
+  justify-content: center;
 }
 
 .weatherBox {
@@ -24,4 +24,12 @@ footer {
      left: 0;
      width: 100%;
      background-color: #efefef;
+}
+
+// .container {
+//   margin-left: 0;
+// }
+
+.some-class {
+  margin-left: 50px !important;
 }

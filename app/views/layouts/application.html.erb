@@ -12,6 +12,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <!--  <%= @current_user.inspect %>  -->
+
+
+      <% if @current_user  %>
+      <div>
+        <p>Hello <%= @current_user.name %></p>
+        <div><%= image_tag(@current_user.picture) %></div>
+      </div>
+      <%= link_to('logout', logout_path) %>
+      <% else %>
+      <%= link_to('login with facebook', '/auth/facebook') %>
+      <% end %>
+
       <%= render "partials/flash" %>
       <%= render "partials/header" %>
         <%= yield %>
