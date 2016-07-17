@@ -28,9 +28,11 @@
     <tr>
       <th>Swell Chart</th>
       <th>Wind Chart</th>
-    </tr class="charts">
-    <td><%= image_tag(@data[0]['charts']['swell']) %></td>
-    <td><%= image_tag(@data[0]['charts']['wind']) %></td>
+    </tr>
+    <tr>
+      <td class="charts"><%= image_tag(@data[0]['charts']['swell']) %></td>
+      <td class="charts"><%= image_tag(@data[0]['charts']['wind']) %></td>
+    </tr>
   </table>
 </div>
 
