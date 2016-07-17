@@ -1,14 +1,40 @@
-<h1>Weather#index</h1>
-<p>Find me in app/views/weather/index.html.erb</p>
+<h1>Weather for La Push, WA</h1>
 
-<%= form_tag(root_path, method: :GET) do %>
+<!--<%= form_tag(root_path, method: :GET) do %>
 
 <p class="weatherBox"><%= text_field_tag(:term) %></p>
 
 <%= submit_tag('Search') %>
 <% end %>
-<br/>
-  <div>
+<br/>-->
+
+<div class="container">
+  <table class="bordered">
+    <tr>
+      <th>Current Temp</th>
+      <th>Wind Speed</th>
+      <th>Wind Direction</th>
+      <th>Swell Height</th>
+      <th>Swell Direction</th>
+    </tr>
+      <td><%= @data[0]['condition']['temperature'] %> &#x2109; <img src="http://cdnimages.magicseaweed.com/30x30/<%= @data[0]['condition']['weather'] %>"</td>
+      <td><%= @data[0]['wind']['speed']%></td>
+      <td><%= @data[0]['wind']['compassDirection']%></td>
+      <td><%= @data[0]['swell']['components']['combined']['height']%></td>
+      <td><%= @data[0]['swell']['components']['combined']['compassDirection']%></td>
+    </tr>
+  </table>
+  <table class="bordered">
+    <tr>
+      <th>Swell Chart</th>
+      <th>Wind Chart</th>
+    </tr class="charts">
+    <td><%= image_tag(@data[0]['charts']['swell']) %></td>
+    <td><%= image_tag(@data[0]['charts']['wind']) %></td>
+  </table>
+</div>
+
+<!--   <div>
   <h3>Current Temp</h3>
   <p><%= @data[0]['condition']['temperature'] %> &#x2109;</p>
 
@@ -28,5 +54,5 @@
   <p><%= image_tag(@data[0]['charts']['swell']) %></p>
   <p><%= image_tag(@data[0]['charts']['wind']) %></p>
 
-</div>
+</div> -->
 
