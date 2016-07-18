@@ -1,7 +1,8 @@
-<h1>Find a kayak buddy</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container">
+  <h1>Find a kayak buddy</h1>
+  <%= link_to('logout', logout_path, method: :delete) %>
+</div>
 
-<%= link_to('logout', logout_path, method: :delete) %>
 
 <% @users.each do |user| %>
   <div class="divider"></div>
