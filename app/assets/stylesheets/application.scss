@@ -23,4 +23,27 @@ $primary-color: color("blue", "lighten-2") !default;
 
 
 
+footer.page-footer {
+	margin-top: 0;
+    bottom:0;
+}
 
+.about {
+	text-align: left;
+}
+
+//sticky footer CSS
+body {
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+    

@@ -17,7 +17,7 @@
       <th>Swell Height</th>
       <th>Swell Direction</th>
     </tr>
-      <td><%= @data[0]['condition']['temperature'] %> &#x2109; <img src="http://cdnimages.magicseaweed.com/30x30/<%= @data[0]['condition']['weather'] %>"</td>
+      <td><%= @data[0]['condition']['temperature'] %> &#x2109;</td>
       <td><%= @data[0]['wind']['speed']%></td>
       <td><%= @data[0]['wind']['compassDirection']%></td>
       <td><%= @data[0]['swell']['components']['combined']['height']%></td>
@@ -28,9 +28,11 @@
     <tr>
       <th>Swell Chart</th>
       <th>Wind Chart</th>
-    </tr class="charts">
-    <td><%= image_tag(@data[0]['charts']['swell']) %></td>
-    <td><%= image_tag(@data[0]['charts']['wind']) %></td>
+    </tr>
+    <tr>
+      <td class="charts"><%= image_tag(@data[0]['charts']['swell']) %></td>
+      <td class="charts"><%= image_tag(@data[0]['charts']['wind']) %></td>
+    </tr>
   </table>
 </div>
 
