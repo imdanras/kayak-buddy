@@ -1,3 +1,48 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.pic {
+  width: 100%;
+}
+
+#container1 {
+  height: 425px;
+}
+#container2 {
+  height: 425px;
+}
+#container3 {
+  height: 425px;
+}
+#container4 {
+  height: 425px;
+}
+#container5 {
+  height: 425px;
+}
+
+#bttn1 {
+  background-color: #067BC2
+}
+#bttn2 {
+  background-color: #067BC2
+}
+#bttn3 {
+  background-color: #067BC2
+}
+#bttn4 {
+  background-color: #067BC2
+}
+#bttn5 {
+  background-color: #067BC2
+}
+#bttn6 {
+  background-color: #067BC2
+}
+
+@media (max-width: 375px) {
+
+  .groups {
+    font-size: 2rem;
+  }
+}
