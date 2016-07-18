@@ -22,8 +22,9 @@
 			<%= f.label(:Male) %><br/>
 
 			<%= f.label :skill_level %>
-			<%= f.select :skill_level, [['Beginner', 'beginner'], ['Intermediate', 'intermediate'], ['Advanced', 'advanced']] %><br/>
-
+			<div class="input-field">
+				<%= f.select :skill_level, [['Beginner', 'beginner'], ['Intermediate', 'intermediate'], ['Advanced', 'advanced']] %><br/>
+			</div>
 			<%= f.label :city %>
 			<%= f.text_field :city %>
 
