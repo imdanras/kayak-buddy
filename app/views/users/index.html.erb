@@ -1,22 +1,31 @@
-<h1>Users#index</h1>
+<h1>Find a kayak buddy</h1>
 <p>Find me in app/views/users/index.html.erb</p>
 
 <%= link_to('logout', logout_path, method: :delete) %>
 
 <% @users.each do |user| %>
-<div class="divider"></div>
-<div class="section">
-  
-<div><a href="<%= user.picture %>" alt="user image"></a></div>
+  <div class="divider"></div>
+  <div class="section row">
+    
+    <div class="col m6 offset-m1 s6">
+      
+      <a href="<%= user.picture %>" class="" alt="user image"></a>
 
-  <div class="container some-class">
-    <p>
-      <span>link_to('<%= user.name %>', user_path')</span>    <!-- this should like to specific user's page (user_path) -->
-      <span>| <%= user.city %></span>
-      <span>| <%= user.gender %> | </span>
-    </p>
-    <p>Skill Level: <%= user.skill_level %></p>
-    <div><%= user.more_info %></div>
- </div>
-</div>
+        <div class="container">
+          <p>
+          <!-- this should link to specific user's page (user_path) -->
+            <span><%= link_to(user.name, user_path(user)) %></span>    
+            <span>| <%= user.city %></span>
+            <span>| <%= user.gender %> | </span>
+          </p>
+          <p>Skill Level: <%= user.skill_level %></p>
+          <div><%= user.more_info %></div>
+       </div>
+    </div>
+
+    <div class="col m3 offset-m2 s6">
+    <button class="btn send-msg">Contact</button>
+    </div>
+
+  </div>
 <% end %>
