@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'weather/index'
 
+  get 'groups/lakes'
+
   root "users#index"
 
   resources :users
