@@ -3,7 +3,9 @@
   <%= link_to('logout', logout_path, method: :delete) %>
 </div>
 
-
+<div class="container">
+  <%= will_paginate @users %>
+</div>
 <% @users.each do |user| %>
   <div class="divider"></div>
   <div class="section row">
@@ -13,7 +15,7 @@
       <a href="<%= user.picture %>" class="" alt="user image"></a>
 
         <div class="container">
-          <p>
+          <p>-->
           <!-- this should link to specific user's page (user_path) -->
             <span><%= link_to(user.name, user_path(user)) %></span>    
             <span>| <%= user.city %></span>
@@ -30,3 +32,6 @@
 
   </div>
 <% end %>
+<div class="container">
+  <%= will_paginate @users %>
+</div>
