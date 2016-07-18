@@ -1,4 +1,18 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
 
+
+<div class="row">
+  <div class="col s11 offset-s1">
+  <h3 class="user-name"><%= @user.name %></h3>
+  <button class="btn user-show-btn">Contact</button>
+  <!-- Add materialize's image responsive class -->
+    <!-- <img src="<%= @user.picture %>" class="" alt="image of @user"></a> -->
+    <p><strong>Gender:</strong> <%= @user.gender %></p>
+    <p><strong>Skill Level:</strong> <%= @user.skill_level %></p>
+    <p><strong>City:</strong> <%= @user.city %></p>
+    <p><%= @user.more_info %></p>
+  </div>
+<!--   <div class="col s7 offset-s2">
+  <button class="btn user-show-btn">Contact</button>
+  </div> -->
+</div>
