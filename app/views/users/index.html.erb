@@ -12,17 +12,18 @@
     
     <div class="col m6 offset-m1 s6">
       
-      <a href="<%= user.picture %>" class="" alt="user image"></a>
+      <img src="<%= user.picture %>" class="user-img" alt="user image">
 
-        <div class="container">
-          <p>-->
+        <div class="container user-ctn">
+          <div class="user-info">
           <!-- this should link to specific user's page (user_path) -->
             <span><%= link_to(user.name, user_path(user)) %></span>    
             <span>| <%= user.city %></span>
             <span>| <%= user.gender %> | </span>
-          </p>
+        
           <p>Skill Level: <%= user.skill_level %></p>
           <div><%= user.more_info %></div>
+        </div>
        </div>
     </div>
 
