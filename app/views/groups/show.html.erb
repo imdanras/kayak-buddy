@@ -1,2 +1,29 @@
 <h1>Groups#show</h1>
 <p>Find me in app/views/groups/show.html.erb</p>
+
+<!-- @users should be what you use in the controller, otherwise change it -->
+<% @users.each do |user| %>
+  <div class="divider"></div>
+  <div class="section row">
+    
+    <div class="col m6 offset-m1 s6">
+      
+      <a href="<%= user.picture %>" class="" alt="user image"></a>
+
+        <div class="container">
+          <p>
+          <!-- this should link to specific user's page (user_path) -->
+            <span><%= link_to(user.name, user_path(user)) %></span>    
+            <span>| <%= user.city %></span>
+            <span>| <%= user.gender %> | </span>
+          </p>
+          <p>Skill Level: <%= user.skill_level %></p>
+          <div><%= user.more_info %></div>
+       </div>
+    </div>
+
+    <div class="col m3 offset-m2 s6">
+    <button class="btn send-msg">Contact</button>
+    </div>
+
+  </div>

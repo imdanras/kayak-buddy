@@ -16,9 +16,12 @@ class AuthController < ApplicationController
       u.name = provider_user['info']['name']
       u.email = provider_user['info']['email']
       u.picture = provider_user['info']['image']
+      u.password = 'TJIJUfsd708u3jkhj'
+      u.password_confirmation = 'TJIJUfsd708u3jkhj'
     end
   # end
   # puts user.inspect
+    user.save!
 
     session[:user_id] = user.id
     redirect_to root_path

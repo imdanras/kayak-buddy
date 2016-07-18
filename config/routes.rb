@@ -4,6 +4,14 @@ Rails.application.routes.draw do
   get 'auth/failure', to: 'auth#failure'
   get 'auth/logout', to: 'auth#logout'
 
+  get 'groups/fishing'
+  get 'groups/camping'
+  get 'groups/rapids'
+  get 'groups/recreational'
+  get 'groups/lakes'
+  get 'groups/ocean'
+
+
   root "users#index"
 
   resources :users
