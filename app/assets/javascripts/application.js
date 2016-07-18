@@ -16,10 +16,11 @@
 //= require turbolinks
 //= require_tree .
 
-$( document ).ready(function() {
+$(document).on('turbolinks:load', function() {
 
 	$(".button-collapse").sideNav();
-   $('.parallax').parallax();
+   	$('.parallax').parallax();
+   	$('select').material_select();
 
-//document.ready parentheses below
+// document.ready parentheses below
 });
