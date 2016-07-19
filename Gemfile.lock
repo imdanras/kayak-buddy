@@ -215,7 +215,8 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   pg (~> 0.18)
-  postmark-rails (>= 0.10.0)
+  postmark
+  postmark-rails (~> 0.13.0)
   puma (~> 3.0)
   rails (~> 5.0.0)
   rest-client
