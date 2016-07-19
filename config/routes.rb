@@ -42,6 +42,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  get 'logout', to: 'auth#logout'
+
   # get '/auth/:provider/callback', to: 'sessions#create'
 
   get 'weather', to: 'weather#index'
