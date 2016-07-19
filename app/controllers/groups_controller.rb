@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
-  # before_action :is_authenticated?, except: [:index]
+  # before_action :is_authenticated?, only: [:update, :edit, :create, :destroy, :fishingAdd, :campingAdd, :rapidsAdd, :recreationalAdd, :lakesAdd, :oceanAdd]
+  before_action :is_authenticated?, except: [:index, :new, :create, :show]
+
   def update
     u = User.find(params[:id])
     u.update(group_params)
