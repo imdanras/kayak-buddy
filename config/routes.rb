@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'auth/logout', to: 'auth#logout'
 
   get 'groups/fishing'
+  post 'groups/fishing'
+  
+
   get 'groups/camping'
   get 'groups/rapids'
   get 'groups/recreational'
