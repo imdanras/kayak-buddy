@@ -5,14 +5,23 @@ Rails.application.routes.draw do
   get 'auth/logout', to: 'auth#logout'
 
   get 'groups/fishing'
-  post 'groups/fishing'
+  post 'groups/fishing', to: 'groups#fishingAdd'
   
 
   get 'groups/camping'
+  post 'groups/camping', to: 'groups#campingAdd'
+
   get 'groups/rapids'
+  post 'groups/rapids', to: 'groups#rapidsAdd'
+
   get 'groups/recreational'
+  post 'groups/recreational', to: 'groups#recreationalAdd'
+
   get 'groups/lakes'
+  post 'groups/lakes', to: 'groups#lakesAdd'
+
   get 'groups/ocean'
+  post 'groups/ocean', to: 'groups#oceanAdd'
 
 
   root "users#index"

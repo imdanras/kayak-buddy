@@ -30,19 +30,50 @@ class GroupsController < ApplicationController
   def fishing
   end
 
+  def fishingAdd
+    fishing = Group.find(1)
+    fishing.users << current_user
+  end 
+
   def camping
   end
 
+  def campingAdd
+    camping = Group.find(2)
+    camping.users << current_user
+  end
+
+
   def rapids
+  end
+
+  def rapidsAdd
+    rapids = Group.find(3)
+    rapids.users << current_user
   end
 
   def recreational
   end
 
+  def recreationalAdd
+    recreational = Group.find(4)
+    recreational.users << current_user
+  end
+
   def lakes
   end
 
+  def lakesAdd
+    lakes = Group.find(5)
+    lakes.users << current_user
+  end
+
   def ocean
+  end
+
+  def oceanAdd
+    ocean = Group.find(6)
+    ocean.users << current_user
   end
 
   def group_params

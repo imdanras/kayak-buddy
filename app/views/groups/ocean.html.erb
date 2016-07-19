@@ -1,3 +1,12 @@
 <h1> OCEAN </h1>
 
 <div class="parallax"><%= image_tag "pic7.jpeg", class: "pic" %></div>
+
+<h1> Ocean Group </h1>
+<a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join ocean group', groups_ocean_path %></a>
+
+<%= form_tag('/groups/ocean') %>
+  
+<%= hidden_field_tag 'user_id', 'current_user.id' %>
+
+  <%= submit_tag 'join group' %>
