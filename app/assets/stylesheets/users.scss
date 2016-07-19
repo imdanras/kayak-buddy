@@ -20,9 +20,7 @@ body {
 .user-show-btn {
 }
 
-.user-show-btn {
-  // margin-top: 30px;
-}
+
 
 .user-img {
   // height: 250px;
@@ -32,10 +30,36 @@ body {
   float: left;
 }
 
+
 .user-ctn {
   display: inline-block;
 }
 
 .user-info {
   padding-left: 20px;
+}
+
+.user-show-ctn {
+  position: absolute;
+}
+
+.user-show-img {
+  position: relative;
+  top: 20px;
+  // left: -75px;
+}
+
+.user-name {
+  position: relative;
+  display: inline-block;
+  // margin-left: -60px;
+  margin-left: 40px;
+}
+
+.user-show-btn {
+  // margin-top: 30px;
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  top: -10px;
 }
