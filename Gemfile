@@ -44,6 +44,9 @@ gem 'rest-client'
 
 gem 'materialize-sass'
 
+## Deployment!
+gem 'rails_12factor', group: :production
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
