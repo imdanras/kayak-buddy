@@ -7,6 +7,48 @@
   <%= f.submit 'Logout', class: 'btn' %>
   <% end %>
 
+  <!-- <div class="cards"> -->
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag "pic2.jpeg", class: "activator" %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Fishing<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Fishing<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag "pic3.jpeg", class: "activator" %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Camping<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Camping<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag "pic1.jpeg", class: "activator" %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">See All Groups<i class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">See All Groups<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+  <!-- </div> -->
+
  <!--<%= link_to('logout', auth_logout_path, method: :delete) %>-->
 
 
@@ -50,13 +92,13 @@
 
     <div class="col m3 offset-m2 s6">
 
-    <% if @current_user %>
+    <!--<% if @current_user %>
       <%= form_tag ('/email_sender/display') do %>
       <%= hidden_field_tag 'to_email', user.email %>
       <%= hidden_field_tag 'from_email', @current_user.email %>
       <%= submit_tag 'Contact', class:"btn send-msg" %>
       <% end %>
-    <% end %>
+    <% end %>-->
 
       
 
