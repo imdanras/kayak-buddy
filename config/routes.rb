@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'groups/lakes'
   get 'groups/ocean'
 
+  post '/logout', to: 'sessions#destroy'
 
   root "users#index"
 
