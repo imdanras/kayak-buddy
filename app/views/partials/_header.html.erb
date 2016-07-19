@@ -1,3 +1,15 @@
+<% if @current_user %>
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/users/<%= @current_user.id %>">View</a></li>
+  <li><a href="/users/<%= @current_user.id %>/edit">Edit</a></li>
+  <li><a href="/logout">Logout</a></li>
+<!--   <li class="divider"></li>
+  <li><a href="#!">three</a></li> -->
+</ul>
+
+<% end %>
+
 <nav>
   <div class="nav-wrapper">
     <a href="/" class="brand-logo">kB</a>
@@ -7,10 +19,14 @@
       <li><a href="/weather">Weather</a></li>
       <% if @current_user %>
         <li><a href="/users/<%= @current_user.id %>">Profile</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Profile<i class="material-icons right">arrow_drop_down</i></a></li>
+    
         <% else %>
         <li><a href="/login">Login</a></li>
-      <% end %>
       <li><a href="/users/new">Sign Up</a></li>
+      <% end %>
+      
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><a href="/groups">Groups</a></li>

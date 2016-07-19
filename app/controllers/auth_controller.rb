@@ -31,6 +31,7 @@ class AuthController < ApplicationController
 
   def logout
     session[:user_id] = nil
+    flash[:success] = "You are logged out of facebook"
     redirect_to root_path
   end
 

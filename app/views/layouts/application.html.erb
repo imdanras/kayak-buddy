@@ -17,10 +17,10 @@
 
 
       <% if @current_user  %>
-      <div>
+    <!--   <div>
         <p>Hello <%= @current_user.name %></p>
-        <!-- <div><%#= image_tag(@current_user.picture) %></div> -->
-      </div>
+        <div><%#= image_tag(@current_user.picture) %></div> 
+      </div> -->
       <%= link_to('logout', logout_path) %>
       <% else %>
       <%= link_to('login with facebook', '/auth/facebook') %>
