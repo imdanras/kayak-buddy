@@ -32,7 +32,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize'
 
 # email gem
-gem 'postmark-rails', '>= 0.10.0'
+gem 'postmark'
+gem 'postmark-rails', '~> 0.13.0'
 
 gem 'omniauth'
 gem 'omniauth-facebook'

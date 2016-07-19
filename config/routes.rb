@@ -1,19 +1,31 @@
 Rails.application.routes.draw do
 
+  post 'email_sender/display'
+
   get 'auth/:provider/callback', to: 'auth#callback'
   get 'auth/failure', to: 'auth#failure'
   get 'auth/logout', to: 'auth#logout'
 
   get 'groups/fishing'
-  post 'groups/fishing'
+  post 'groups/fishing', to: 'groups#fishingAdd'
   
 
   get 'groups/camping'
-  get 'groups/rapids'
-  get 'groups/recreational'
-  get 'groups/lakes'
-  get 'groups/ocean'
+  post 'groups/camping', to: 'groups#campingAdd'
 
+  get 'groups/rapids'
+  post 'groups/rapids', to: 'groups#rapidsAdd'
+
+  get 'groups/recreational'
+  post 'groups/recreational', to: 'groups#recreationalAdd'
+
+  get 'groups/lakes'
+  post 'groups/lakes', to: 'groups#lakesAdd'
+
+  get 'groups/ocean'
+  post 'groups/ocean', to: 'groups#oceanAdd'
+
+  post '/logout', to: 'sessions#destroy'
 
   root "users#index"
 

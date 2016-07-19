@@ -3,7 +3,12 @@
 <div class="container">
   <h1>Find a kayak buddy</h1>
  
- <%= link_to('logout', logout_path, method: :delete) %>
+  <%= form_for(:session, url: logout_path) do |f| %>
+  <%= f.submit 'Logout', class: 'btn' %>
+  <% end %>
+
+ <!--<%= link_to('logout', auth_logout_path, method: :delete) %>-->
+
 </div>
   <div class="container">
     <%= will_paginate @users %>
@@ -30,11 +35,14 @@
     </div>
 
     <div class="col m3 offset-m2 s6">
+
+    <% if @current_user %>
       <%= form_tag ('/email_sender/display') do %>
       <%= hidden_field_tag 'to_email', user.email %>
       <%= hidden_field_tag 'from_email', @current_user.email %>
       <%= submit_tag 'Contact', class:"btn send-msg" %>
       <% end %>
+    <% end %>
 
       
 

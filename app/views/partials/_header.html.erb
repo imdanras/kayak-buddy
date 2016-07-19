@@ -5,7 +5,11 @@
     <ul class="right hide-on-med-and-down">
       <li><a href="/groups">Groups</a></li>
       <li><a href="/weather">Weather</a></li>
-      <li><a href="/users/<%= @current_user.id %>">Profile</a></li>
+      <% if @current_user %>
+        <li><a href="/users/<%= @current_user.id %>">Profile</a></li>
+        <% else %>
+        <li><a href="/login">Login</a></li>
+      <% end %>
       <li><a href="/users/new">Sign Up</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">

@@ -1,2 +1,14 @@
-rapids.html.erb
+
 <div class="parallax"><%= image_tag "pic4.jpeg", class: "pic" %></div>
+
+<h1> Rapids Group </h1>
+
+
+<%= form_tag('/groups/rapids') %>
+  
+<%= hidden_field_tag 'user_id', 'current_user.id' %>
+
+  <%= submit_tag 'join group' %>
+
+  <a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join rapids group', groups_rapids_path %></a>
+
