@@ -1,2 +1,12 @@
-recreational.html.erb
+
+
 <div class="parallax"><%= image_tag "pic5.jpeg", class: "pic" %></div>
+
+<h1> Recreational Group </h1>
+<a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join recreational group', groups_recreational_path %></a>
+
+<%= form_tag('/groups/recreational') %>
+  
+<%= hidden_field_tag 'user_id', 'current_user.id' %>
+
+  <%= submit_tag 'join group' %>

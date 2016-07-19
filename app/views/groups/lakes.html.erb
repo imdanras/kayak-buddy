@@ -1,3 +1,12 @@
 <h1>Lakes Group</h1>
 <p>Find me in app/views/groups/lakes.html.erb</p>
 <img src="https://images.unsplash.com/photo-1468549940493-46152524296c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=22fd0ceed4703bb1404e4f447d921041" id="lakepic">
+
+<h1> Lakes Group </h1>
+<a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join lakes group', groups_lakes_path %></a>
+
+<%= form_tag('/groups/lakes') %>
+  
+<%= hidden_field_tag 'user_id', 'current_user.id' %>
+
+  <%= submit_tag 'join group' %>
