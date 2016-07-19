@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'email_sender/display'
+
   get 'auth/:provider/callback', to: 'auth#callback'
   get 'auth/failure', to: 'auth#failure'
   get 'auth/logout', to: 'auth#logout'
