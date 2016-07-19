@@ -2,7 +2,8 @@
 
 <div class="container">
   <h1>Find a kayak buddy</h1>
-  <%= link_to('logout', logout_path, method: :delete) %>
+ 
+ <%= link_to('logout', logout_path, method: :delete) %>
 </div>
   <div class="container">
     <%= will_paginate @users %>
@@ -13,17 +14,18 @@
     
     <div class="col m6 offset-m1 s6">
       
-      <a href="<%= user.picture %>" class="" alt="user image"></a>
+      <img src="<%= user.picture %>" class="user-img" alt="user image">
 
-        <div class="container">
-          <p>-->
+        <div class="container user-ctn">
+          <div class="user-info">
           <!-- this should link to specific user's page (user_path) -->
             <span><%= link_to(user.name, user_path(user)) %></span>    
             <span>| <%= user.city %></span>
             <span>| <%= user.gender %> | </span>
-          </p>
+        
           <p>Skill Level: <%= user.skill_level %></p>
-          <div><%= user.more_info %></div>
+          <div class="truncate"><%= user.more_info %></div>
+        </div>
        </div>
     </div>
 
