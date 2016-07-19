@@ -16,6 +16,9 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group.users.each do |user|
+      @group = Group.find(2)
+      
   end
 
   def create
@@ -103,4 +106,5 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, :group, :info, :user_ids => [])
   end
 
+end
 end
