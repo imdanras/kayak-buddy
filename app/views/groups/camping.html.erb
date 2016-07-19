@@ -11,3 +11,7 @@
 
 <%= submit_tag ('Join Camping Group'), data: { confirm: 'You are now apart of the Camping Group' } %>
 
+ <% @group.user.each do |user| %>
+  <p><%= link_to(user.name, user_path) %></p>
+<% end %>
+
