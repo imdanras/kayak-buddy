@@ -29,8 +29,7 @@ $(document).on('turbolinks:load', function() {
     // $('.carousel').carousel('prev');
 
    
-      
-   
 
+    $('.slider').slider({full_width: true});
 // document.ready parentheses below
 });

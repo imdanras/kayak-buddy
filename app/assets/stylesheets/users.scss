@@ -20,7 +20,18 @@ body {
 .user-show-btn {
 }
 
+.fbdiv {
+  width: 50%;
+  margin: 0 auto;
+}
+.facebook-btn {
+  padding: 30px 0px;
+}
 
+.signupbtn {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
 
 .user-img {
   // height: 250px;
@@ -62,19 +73,4 @@ body {
   display: inline-block;
   margin-left: 40px;
   top: -10px;
-}
-
-.pic1 {
-max-width: 75%;
-}
-
-.carousel {
-  position: absolute;
-}
-
-.mainh1 {
-  position: relative;
-  top: 250px;
-  left: 250px;
-  color: white;
 }

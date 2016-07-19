@@ -8,6 +8,12 @@ class UserMailer < ApplicationMailer
   def email_sender
     @greeting = "Hello!" 
 
-    mail to: "to@ga.co"
+    #mail to: "to@ga.co"
+    mail(
+      :subject => 'Hello from Kayak Buddy!',
+      :to  => params[:to_email],
+      :from => 'KAYAK',
+      :html_body => params[:from_email],
+      :track_opens => 'true')
   end
 end
