@@ -4,11 +4,10 @@
 <h1> Rapids Group </h1>
 
 
-<%= form_tag('/groups/rapids') %>
+<%= form_tag('/groups/rapids', class:"waves-effect waves-light btn") %>
   
 <%= hidden_field_tag 'user_id', 'current_user.id' %>
 
-  <%= submit_tag 'join group' %>
+<%= submit_tag ('Join Rapids Group'), data: { confirm: 'You are now apart of the Rapids Group' } %>
 
-  <a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join rapids group', groups_rapids_path %></a>
 

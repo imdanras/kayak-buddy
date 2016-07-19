@@ -2,11 +2,11 @@
 <div class="parallax"><%= image_tag "pic2.jpeg", class: "pic" %></div>
 
 <h1> Fishing Group </h1>
-<a class="waves-effect waves-light btn" id="bttn1" <%= link_to 'join fishing group', groups_fishing_path %></a>
 
-<%= form_tag('/groups/fishing') %>
+
+<%= form_tag('/groups/fishing', class: "waves-effect waves-light btn" ) %> 
   
 <%= hidden_field_tag 'user_id', 'current_user.id' %>
 
-  <%= submit_tag 'join group' %>
+<%= submit_tag ('Join Fishing Group'), data: { confirm: 'You are now apart of the Fishing Group' } %>
 
