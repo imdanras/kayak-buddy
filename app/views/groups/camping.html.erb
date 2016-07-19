@@ -1,13 +1,39 @@
 
-<div class="parallax"><%= image_tag "pic3.jpeg", class: "pic" %></div>
+<!-- <div class="parallax"><%= image_tag "pic3.jpeg", class: "pic" %></div> -->
 
 
 <h1> Camping Group </h1>
 
 
-<%= form_tag('/groups/camping', class: "waves-effect waves-light btn") %>
+<%= form_tag('/groups/camping', class: "waves-effect waves-light btn") do %>
   
 <%= hidden_field_tag 'user_id', 'current_user.id' %>
 
 <%= submit_tag ('Join Camping Group'), data: { confirm: 'You are now apart of the Camping Group' } %>
 
+<% end %>
+
+<div class="container">
+    <%= will_paginate @user_paginator %>
+  </div>
+<% @camping.users.each do |user| %>
+  <div class="divider"></div>
+  <div class="section row">
+    
+    <div class="col m6 offset-m1 s6">
+      
+      <img src="<%= user.picture %>" class="user-img" alt="user image">
+
+        <div class="container user-ctn">
+          <div class="user-info">
+          <!-- this should link to specific user's page (user_path) -->
+       		<span><%= link_to(user.name, user_path(user)) %></span>    
+            <span>| <%= user.city %></span>
+            <span>| <%= user.gender %> | </span>
+        
+          <p>Skill Level: <%= user.skill_level %></p>
+          <div class="truncate"><%= user.more_info %></div>
+        </div>
+       </div>
+    </div>
+ <% end %>

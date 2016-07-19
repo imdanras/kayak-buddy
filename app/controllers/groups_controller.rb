@@ -28,6 +28,12 @@ class GroupsController < ApplicationController
   end
 
   def fishing
+    @fishing = Group.find(1)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
+
+    # @car_paginator = Car.paginate(page: params[:page], per_page: 5).order(created_at: :desc)
+    # @cars = @car_paginator.group_by { |r| r.created_at.to_date }
   end
 
   def fishingAdd
@@ -36,6 +42,9 @@ class GroupsController < ApplicationController
   end 
 
   def camping
+    @camping = Group.find(2)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
   end
 
   def campingAdd
@@ -45,6 +54,9 @@ class GroupsController < ApplicationController
 
 
   def rapids
+    @rapids = Group.find(3)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
   end
 
   def rapidsAdd
@@ -53,6 +65,9 @@ class GroupsController < ApplicationController
   end
 
   def recreational
+    @recreational = Group.find(4)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
   end
 
   def recreationalAdd
@@ -61,6 +76,9 @@ class GroupsController < ApplicationController
   end
 
   def lakes
+    @lakes = Group.find(5)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
   end
 
   def lakesAdd
@@ -69,6 +87,9 @@ class GroupsController < ApplicationController
   end
 
   def ocean
+    @ocean = Group.find(6)
+    @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
+    @user = @user_paginator
   end
 
   def oceanAdd
