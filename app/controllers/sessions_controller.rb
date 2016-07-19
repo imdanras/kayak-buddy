@@ -3,6 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
+    p "-----------------------"
+    p @current_user
+    p "-----------------------"
     user = User.authenticate(user_params)
     if user
       session[:user_id] = user.id 
@@ -15,6 +18,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    p "-----------------------"
+    p @current_user
+    p "-----------------------"
     session[:user_id] = nil
     flash[:success] = "You are logged out"
     redirect_to root_path

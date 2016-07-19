@@ -1,11 +1,12 @@
+
+
 <div class="container">
   <h1>Find a kayak buddy</h1>
   <%= link_to('logout', logout_path, method: :delete) %>
 </div>
-
-<div class="container">
-  <%= will_paginate @users %>
-</div>
+  <div class="container">
+    <%= will_paginate @users %>
+  </div>
 <% @users.each do |user| %>
   <div class="divider"></div>
   <div class="section row">
@@ -27,7 +28,14 @@
     </div>
 
     <div class="col m3 offset-m2 s6">
-    <button class="btn send-msg">Contact</button>
+      <%= form_tag ('/email_sender/display') do %>
+      <%= hidden_field_tag 'to_email', user.email %>
+      <%= hidden_field_tag 'from_email', @current_user.email %>
+      <%= submit_tag 'Contact', class:"btn send-msg" %>
+      <% end %>
+
+      
+
     </div>
 
   </div>

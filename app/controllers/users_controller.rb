@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   # before_action :current_user, except: [:index, :new, :create, :show]
   # before_action :current_user
 
+
+
   def index
     @users = User.paginate(:page => params[:page], :per_page => 10)
   end

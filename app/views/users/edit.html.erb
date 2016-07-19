@@ -16,10 +16,10 @@
 
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
-
-      <%= f.radio_button(:gender, 'female') %>
-      <%= f.label(:Female) %>
-
+      <div class="input-field">
+        <%= f.radio_button(:gender, 'female') %>
+        <%= f.label(:Female) %>
+      </div>
       <%= f.radio_button(:gender, 'male') %>
       <%= f.label(:Male) %><br/>
 

@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 # before we access any page, we're goin to set the session to the current user
-  before_action = :current_user
+  before_action :current_user
 
   def is_authenticated?
     unless current_user

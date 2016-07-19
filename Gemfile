@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize'
 
+# email gem
+gem 'postmark-rails', '>= 0.10.0'
+
 gem 'omniauth'
 gem 'omniauth-facebook'
 
