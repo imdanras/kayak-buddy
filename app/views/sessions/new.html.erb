@@ -1,9 +1,15 @@
 <div class="signup">
   <h3 class="center-align">Welcome back!</h3>
-  <p class="center-align">Don't have an account? <%= link_to('Sign up', new_user_path) %></p>
+  <div class="fbdiv">
+    <a href="/auth/facebook"><%= image_tag "facebook-btn.png", class: "facebook-btn" %></a>
+</div>
+  <h5 class="center-align">Or sign in below:</h5>
+  
   <%= form_for(:user) do |f| %>
     <%= f.email_field :email, placeholder: "Enter your email" %>
     <%= f.password_field :password, placeholder: "Enter your password" %>
-    <%= f.submit "Login", class: 'signupbtn waves-effect waves-light btn' %>
+   <%= f.submit "Login", class: 'signupbtn waves-effect waves-light btn' %>
+   <p class="right-align no-account">Don't have an account? <%= link_to('Sign up', new_user_path) %></p>
     <% end %>
+
 </div>
