@@ -8,57 +8,74 @@
     <%= image_tag "pic11.jpg", class: "responsive-img" %>
   </div>
   
- 
-  
-
+<h4 class="center-align">Join a group</h4>
   <div class="row">
-    <div class="card small col s12 m4 l4">
+    <div class="card small col s12 m6 l3">
       <div class="card-image waves-effect waves-block waves-light">
-        <%= image_tag "pic2.jpg", class: "activator" %>
+        <%= image_tag "pic5.jpg", class: "activator" %>
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Fishing<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
+        <span class="card-title activator grey-text text-darken-4">Lakes<i class="material-icons right">more_vert</i></span>
+        <p><%= link_to('View group', groups_lakes_path) %></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Lakes<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+      </div>
+    </div>
+
+    <div class="card small col s12 m6 l3">
+      <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag "pic4.jpg", class: "activator" %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Rivers<i class="material-icons right">more_vert</i></span>
+        <p><%= link_to('View group', groups_rapids_path) %></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Fishing<i class="material-icons right">close</i></span>
         <p>Here is some more information about this product that is only revealed once clicked on.</p>
       </div>
     </div>
-    <div class="card small col s12 m4 l4">
+
+    <div class="card small col s12 m6 l3">
       <div class="card-image waves-effect waves-block waves-light">
         <%= image_tag "pic3.jpg", class: "activator" %>
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">Camping<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
+        <p><%= link_to('View group', groups_camping_path) %></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Camping<i class="material-icons right">close</i></span>
         <p>Here is some more information about this product that is only revealed once clicked on.</p>
       </div>
     </div>
-    <div class="card small col s12 m4 l4">
+    
+    <div class="card small col s12 m6 l3">
       <div class="card-image waves-effect waves-block waves-light">
-        <%= image_tag "pic5.jpg", class: "activator" %>
+        <%= image_tag "pic2.jpg", class: "activator" %>
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">See All Groups<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
+        <span class="card-title activator grey-text text-darken-4">Fishing<i class="material-icons right">more_vert</i></span>
+        <p><%= link_to('View group', groups_fishing_path) %></p>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">See All Groups<i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4">Camping<i class="material-icons right">close</i></span>
         <p>Here is some more information about this product that is only revealed once clicked on.</p>
       </div>
     </div>
+
   </div>
 
  <!--<%= link_to('logout', auth_logout_path, method: :delete) %>-->
 
  
+<h4 class="center-align">Find a buddy</h4>
 
 
-  <div class="container">
+  <div class="container right-align">
+
     <%= will_paginate @users %>
   </div>
 <% @users.each do |user| %>
@@ -98,6 +115,8 @@
 
   </div>
 <% end %>
-<div class="container">
+<div class="pag-bot">
+<div class="container right-align">
   <%= will_paginate @users %>
+</div>
 </div>
