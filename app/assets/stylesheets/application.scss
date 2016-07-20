@@ -22,6 +22,9 @@ $primary-color: color("blue", "darken-2") !default;
 @import "materialize";
 
 
+html {
+  font-family: 'Harmattan', sans-serif;
+}
 
 footer.page-footer {
 	margin-top: 0;
@@ -50,4 +53,8 @@ main {
 //for pagination
 .pagination a li.active {
   color: #fff;
+}
+
+.brand-logo {
+  font-family: 'Fugaz One', cursive;
 }
