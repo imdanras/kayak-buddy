@@ -28,8 +28,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # for pagination
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate', github: 'jonatack/will_paginate'
 gem 'will_paginate-materialize'
+
 
 # email gem
 gem 'postmark'

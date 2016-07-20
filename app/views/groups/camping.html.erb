@@ -15,27 +15,29 @@
 <% end %>
 
 <div class="container">
-    <%= will_paginate @user_paginator %>
-  </div>
-<% @camping.users.each do |user| %>
-  <div class="divider"></div>
-  <div class="section row">
-    
-    <div class="col m6 offset-m1 s6">
-      
-      <img src="<%= user.picture %>" class="user-img" alt="user image">
+</div>
 
-        <div class="container user-ctn">
-          <div class="user-info">
-          <!-- this should link to specific user's page (user_path) -->
-       		<span><%= link_to(user.name, user_path(user)) %></span>    
-            <span>| <%= user.city %></span>
-            <span>| <%= user.gender %> | </span>
+  <% @camping.users.each do |user| %>
+    <div class="divider"></div>
+    <div class="section row">
+      
+      <div class="col m6 offset-m1 s6">
         
-          <p>Skill Level: <%= user.skill_level %></p>
-          <div class="truncate"><%= user.more_info %></div>
+        <img src="<%= user.picture %>" class="user-img" alt="user image">
+
+          <div class="container user-ctn">
+            <div class="user-info">
+            <!-- this should link to specific user's page (user_path) -->
+            <span><%= link_to(user.name, user_path(user)) %></span>    
+              <span>| <%= user.city %></span>
+              <span>| <%= user.gender %> | </span>
+          
+            <p>Skill Level: <%= user.skill_level %></p>
+            <div class="truncate"><%= user.more_info %></div>
+          </div>
+<%= will_paginate @user_paginator %>
         </div>
-       </div>
+      </div>
     </div>
  <% end %>
 
