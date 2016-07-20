@@ -7,7 +7,13 @@
 <!--   <li class="divider"></li>
   <li><a href="#!">three</a></li> -->
 </ul>
-
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="/users/<%= @current_user.id %>">View</a></li>
+  <li><a href="/users/<%= @current_user.id %>/edit">Edit</a></li>
+  <li><a href="/logout">Logout</a></li>
+<!--   <li class="divider"></li>
+  <li><a href="#!">three</a></li> -->
+</ul>
 <% end %>
 
 <nav>
@@ -36,7 +42,7 @@
       <% if @current_user %>
         <!-- <li><a href="/users/<%= @current_user.id %>">Profile</a></li> -->
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Profile<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Profile<i class="material-icons right">arrow_drop_down</i></a></li>
     
         <% else %>
         <li><a href="/login">Login</a></li>
