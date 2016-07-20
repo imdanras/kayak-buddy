@@ -1,24 +1,42 @@
-# README
+### Kayak Buddy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Kayak Buddy is an app designed to connect kayakers to other kayakers for meetups based on groups they are able to join.
 
-Things you may want to cover:
+### Features
+* Able to log in with either Facebook or email
+* Join a group and see members of that group
+* Send an email to another user to coordinate a meetup
 
-* Ruby version
+### Credits
+* [jQuery](https://jquery.com/)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Rails](http://rubyonrails.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Materialize](http://materializecss.com/)
+* [Google Fonts](https://www.google.com/fonts)
+* [Unsplash](https://unsplash.com/)
+* [freepik](http://www.freepik.com/)
+* [Magic Seaweed API](http://magicseaweed.com/developer/api)
+* [OmniAuth](https://github.com/intridea/omniauth)
 
-* System dependencies
+[//]: # (Comment)
 
-* Configuration
+[//]: # (This README would normally document whatever steps are necessary to get the application up and running.)
 
-* Database creation
+[//]: # (Things you may want to cover:)
 
-* Database initialization
+[//]: # (* Ruby version)
 
-* How to run the test suite
+[//]: # (* System dependencies)
 
-* Services (job queues, cache servers, search engines, etc.)
+[//]: # (* Configuration)
 
-* Deployment instructions
+[//]: # (* Database creation)
 
-* ...
+[//]: # (* Database initialization)
+
+[//]: # (* How to run the test suite)
+
+[//]: # (* Services (job queues, cache servers, search engines, etc.))
+
+[//]: # (* Deployment instructions)
