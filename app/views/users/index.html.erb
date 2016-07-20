@@ -2,6 +2,11 @@
 
 
 <h1 class="mainh1">Find a kayak buddy</h1>
+
+
+<div class="carousel">
+    <%= image_tag "pic11.jpg", class: "responsive-img" %>
+  </div>
   
 <h4 class="center-align">Join a group</h4>
   <div class="row">
@@ -65,23 +70,12 @@
 
  <!--<%= link_to('logout', auth_logout_path, method: :delete) %>-->
 
-
-
-<!-- <div class="carousel">
-    <a class="carousel-item" ></a>
-    <a class="carousel-item" href="#two!"></a>
-    <a class="carousel-item" href="#three!"></a>
-    <a class="carousel-item" href="#four!"></a>
-    <a class="carousel-item" href="#five!"></a>
-    <div class="parallax"><%= image_tag "pic10.jpg", class: "pic1" %> </div> 
-  </div> -->
-
-
-
  
 <h4 class="center-align">Find a buddy</h4>
 
+
   <div class="container right-align">
+
     <%= will_paginate @users %>
   </div>
 <% @users.each do |user| %>

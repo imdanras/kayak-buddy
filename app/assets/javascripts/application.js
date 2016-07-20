@@ -24,9 +24,9 @@ $(document).on('turbolinks:load', function() {
    	$('.parallax').parallax();
    	$('select').material_select();
     
-    // $('.carousel').carousel();
-    // $('.carousel').carousel('next');
-    // $('.carousel').carousel('prev');
+    $('.carousel').carousel();
+    $('.carousel').carousel('next');
+    $('.carousel').carousel('prev');
 
    
 
