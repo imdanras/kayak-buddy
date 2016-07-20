@@ -20,12 +20,10 @@ body {
 .user-show-btn {
 }
 
-.fbdiv {
-  width: 50%;
-  margin: 0 auto;
-}
 .facebook-btn {
   padding: 30px 0px;
+  // margin-left: -0.75rem;
+  // margin-right: -0.75rem;
 }
 
 .input-field {
@@ -81,4 +79,9 @@ body {
 
 .no-account {
   float: right;
+}
+
+.pag-bot {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
