@@ -8,14 +8,47 @@ body {
   text-align: left;
 }
 
-.mainh1 {
+.head-ctn {
+  margin: 0 auto;
+  // max-width: 100%;
+}
+
+.ctn {
+  margin: 0 auto;
   position: relative;
-  // bottom: 300px;
+  max-width: 100%;
+}
+
+.ctn a {
+  // margin: 0 auto;
+  // padding: 0;
+  // text-decoration: none; 
+  display: inline-block;
 }
 
 .head-img {
+  position: relative;
+  // float: left;
   width: 100%;
 }
+
+.ctn h1 {
+  font-size: 8vw;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 1px #522B02 !important;
+}
+
+// .mainh1 {
+//   position: relative;
+//   // bottom: 300px;
+// }
+
+// .head-img {
+//   width: 100%;
+// }
 
 .ctn-rel {
   position: relative;
