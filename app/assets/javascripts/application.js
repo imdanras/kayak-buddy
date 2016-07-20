@@ -18,15 +18,13 @@
 
 $(document).on('turbolinks:load', function() {
 
-  $(".dropdown-button").dropdown();
+  	$(".dropdown-button").dropdown();
 
 	$(".button-collapse").sideNav();
    	$('.parallax').parallax();
    	$('select').material_select();
     
-    $('.carousel').carousel();
-    $('.carousel').carousel('next');
-    $('.carousel').carousel('prev');
+
 
    
 
