@@ -16,6 +16,7 @@
 
 <div class="container">
 </div>
+  <%= will_paginate @user_paginator %>
 
   <% @camping.users.each do |user| %>
     <div class="divider"></div>
@@ -35,7 +36,6 @@
             <p>Skill Level: <%= user.skill_level %></p>
             <div class="truncate"><%= user.more_info %></div>
           </div>
-<%= will_paginate @user_paginator %>
         </div>
       </div>
     </div>

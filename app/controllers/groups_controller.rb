@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
   def show
     @group.users.each do |user|
       @group = Group.find(2)
-      
+    end
   end
 
   def create
@@ -44,9 +44,9 @@ class GroupsController < ApplicationController
   end 
 
   def camping
-    @camping = Group.find_by_id(2)
+    @camping = Group.find(2)
     puts '*************'
-    puts @camping
+    puts @camping.class
     puts '*************'
     @user_paginator = User.paginate(:page => params[:page], :per_page => 10)
     @users = @user_paginator
@@ -106,5 +106,4 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, :group, :info, :user_ids => [])
   end
 
-end
 end
