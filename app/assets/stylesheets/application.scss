@@ -55,6 +55,21 @@ main {
   color: #fff;
 }
 
-.brand-logo {
-  font-family: 'Fugaz One', cursive;
+.logo-ctn {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.cool-logo {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.kayakman {
+  position: absolute;
+  height: 70%;
+  margin-left: 5px;
+  max-height: 50px;
+  margin-top: 5px;
+  padding-right: 10px;
 }
